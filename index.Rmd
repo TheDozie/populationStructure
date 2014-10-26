@@ -1,0 +1,73 @@
+---
+title       : Population Structure Visualization
+subtitle    : Shiny Assignment for Data Products Coursera Course
+author      : Dozie Ezigbalike
+job         : Data Technology Section, UNECA
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## What's a Population Pyramid
+
+- Wikipedia: a graphical illustration that shows the distribution of various age groups in a population (typically that of a country or region of the world)
+- Ploted with 5-year age classes on vertical axis and population count or percentages in horizontal bars
+- Age-class axis in middle, males to the left, females to the right
+- Population counts decrease with increasing age classes
+- Therefore the shape is a *pyramid*, thus the name
+
+--- 
+
+## Example Population Pyramid
+
+Population Pyramid of Africa in 2014 produced with Minato Nakazawa's pyramid package and data from UN's World Population Prospects.
+
+<div style='text-align: center;'>
+    <img height='560' src='http://ecastats.uneca.org/popVis/africa2014.png' />
+</div>
+
+---
+
+## Comparing Population Pyramids
+
+- We sometimes need to compare population pyramids:
++ Different countries or regions at the same time
++ Different epochs for the same country or region
+- The only way to compare standard population pyramids is to plot them side by side for visual comparison
+- Why not plot with lines that can be overlaid to easily make comparison
+- This shiny application does that
+
+---
+
+## The Application
+
+- The user interface presents a drop down list of all African countries
+- A slider input allows two years to be selected
+- Output:
++ Population pyramids (line version) for the base year, current year and comparison year (default: 1950, thisYear, 2100)
++ Evolution of broad population classes of children (ages 0-14), adult (15-64) and old (65+)
++ Comparative table of key population facts
+
+<div style='text-align: center;'>
+    <img height='200' src='http://ecastats.uneca.org/popVis/popUI.png' />
+</div>
+
+---
+
+## Usage and Output
+
+You need to have installed shiny
+```{r}
+library(shiny)
+runGitHub("populationStructure", "TheDozie")
+```
+Sample output:
+<div style='text-align: center;'>
+    <img height='300' src='http://ecastats.uneca.org/popVis/popPlots.png' />
+</div>
+
+
+--- 
