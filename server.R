@@ -18,6 +18,7 @@ shinyServer(function(input, output, session) {
 
       readData <- reactive({
             popcountry=input$country
+            
             ## check if country list has been set up, if not don't bother
             listUp <- grep("#", popcountry)
             if (length(listUp) == 0){      

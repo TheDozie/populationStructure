@@ -9,7 +9,7 @@ shinyUI(fluidPage(
       # Application title
       titlePanel("Population Structure Evoulution!"),
       
-      # Sidebar with a slider input for the number of bins
+      # Sidebar with a slider input for base year and comparison year
       sidebarLayout(
             
             sidebarPanel(
