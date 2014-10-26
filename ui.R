@@ -28,7 +28,7 @@ shinyUI(fluidPage(
                                              "Burundi",
                                              "Zimbabwe"
                               ), 
-                              selected = 1),
+                              selected = 5),
                   
                   sliderInput("years",
                               "Which years?",

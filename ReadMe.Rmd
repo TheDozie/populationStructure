@@ -13,7 +13,7 @@ I  saved the shiny application as a .zip file on github to be executed with the 
 
 Then I discovered that the correct command to run shiny apps deployed to github is runGitHub:
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 library(shiny)
 runGitHub("populationStructure", "TheDozie")
 ```
@@ -69,3 +69,4 @@ The output looks like this:
 <div style='text-align: center;'>
     <img height='300' src='http://ecastats.uneca.org/popVis/popPlots.png' />
 </div>
+
