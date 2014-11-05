@@ -144,8 +144,8 @@ DzPyramid2 = function(popdata, country, baseYear, compYear){
                   axis.line = element_line(colour = "black")) +
             coord_flip() +
             ggtitle(title) +
-            annotate("text", x=5, y=min(popDf$popPct)/2, label="Male", fontface="bold") +
-            annotate("text", x=5, y=max(popDf$popPct)/2, label="Female", fontface="bold") 
+            annotate("text", x=85, y=min(popDf$popPct)/2, label="Male", fontface="bold", size=10, colour="lightgray") +
+            annotate("text", x=85, y=max(popDf$popPct)/2, label="Female", fontface="bold", size=10, colour="lightgray") 
       return(DzPyramid)
 }
 
@@ -180,7 +180,7 @@ ageGrades <- function(popdata, country, baseYear, compYear){
                   legend.justification=c(0,1),
                   axis.line = element_line(colour = "black"),
                   panel.background=element_blank()) + 
-            ggtitle(paste("Evolution of population age grades for ", country,
+            ggtitle(paste("Evolution of population age groups for ", country,
                           " from ", baseYear, " to ", compYear, sep="")) +
             geom_vline(xintercept=thisYear, colour="white", size=1.5) +
             annotate("text", x=thisYear, y=0, label=as.character(thisYear), fontface="italic")
